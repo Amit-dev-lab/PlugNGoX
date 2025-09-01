@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/ev_logo.jpg" />
+    <title>PlugNGoX</title>
+    <link rel="stylesheet" href="/CSS/Homestyle.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="/JS/dashboard.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/CSS/footer.css" />
+  </head>
+  <body>
+    <%- include("partials/navbar") %> <%- include("partials/flash.ejs") %>
+    <br /><br />
+    <h2 class="mt-3" style="color: green">
+      &nbsp; &nbsp; &nbsp; &nbsp; <b>ALL STATIONS LISTINGS</b>
+    </h2>
+    <br />
+    <div class="row row-cols-lg-3 row-cols-md-3 row-cols-sm-1" >
+      <% for(let listing of allListings) { %>
+      <a href="/stations/<%= listing._id%>" class="listing-link">
+        <div class="card" data-aos="fade-up">
+          <img
+            src="<%= listing.image %>"
+            class="card-img"
+            alt="listings"
+            style="height: 20rem"
+          />
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text">
+              <!-- <b><%=  listing.title %> </b> <br>
+            <%= listing.city %>,<%= listing.state %><br>
+            <b>Slots:<%=listing.available_slots%>/<%=listing.total_slots%> </b> -->
+
+              <b><%= listing.title %></b> <br />
+              <%= listing.city %>, <%= listing.state %> <br />
+              <span
+                class="slot-info <% if(listing.available_slots === 0) { %> slot-full <% } else if(listing.available_slots <= 5) { %> slot-limited <% } else { %> slot-available <% } %>"
+              >
+                Slots: <%= listing.available_slots %> / <%= listing.total_slots
+                %>
+              </span>
+            </p>
+          </div>
+        </div>
+      </a>
+      <% } %>
+    </div>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+<br>
+<div class="separation"></div>
+ <%- include("partials/footer") %>

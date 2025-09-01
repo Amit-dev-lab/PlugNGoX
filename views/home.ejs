@@ -1,0 +1,272 @@
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/ev_logo.jpg">
+    <title>PlugNGoX</title>
+    <link rel="stylesheet" href="/CSS/Homestyle.css" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/upper.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+        
+  <link rel="stylesheet" href="/CSS/footer.css" />
+  <script defer src="/JS/footer.js"></script>
+    <script src="/JS/dashboard.js" defer></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <img src="/images/ev_logo.jpg" alt="EV Logo">
+  </div>
+    <%- include("partials/navbar") %> <%- include("partials/flash.ejs") %>  
+    <!-- <div class="sepration"></div> -->
+    <section class="first">
+      <div class="hero-content">
+        <span id="typing-text"> FIND THE NEAREST PLACE TO CHARGE YOUR EV</span>
+        <p class="hero-subtext">
+          Are you having trouble finding an EV charging station near you? Don't worry,
+          <b>PlugNGoX has the solution!</b> We are officially certified and available worldwide.
+        </p>
+        <form class="d-flex bar" role="search" method="GET" action="/dashboard">
+          <input
+            class="form-control me-2"
+            type="text"
+            name="query"
+            placeholder="Search The Nearest Station"
+            aria-label="Search"
+            id="searchInput"
+            data-search
+          />
+          <button class="btn btn-success" type="submit" id="searchButton" data-search-button>
+            Search
+          </button>
+        </form>
+      </div>
+      <!-- New Stylish Feature Highlights -->
+      <div class="features-container">
+        <div class="feature">
+          <i class="fas fa-bolt"></i>
+          <h3>Fast Charging</h3>
+          <p>Find high-speed charging stations in just a few clicks.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Real-time Location</h3>
+          <p>Track the nearest EV charging stations in real-time.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure Payments</h3>
+          <p>Seamless booking with secure online transactions.</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>24/7 Support</h3>
+          <p>Get assistance anytime with our 24/7 customer service.</p>
+        </div>
+      </div>
+    </section>
+  <section class="features">
+    <h2>Why Choose <span class="highlight">PlugNGoX</span>?</h2>
+    <div class="feature-cards">
+        <div class="feature-card">
+            <i class="fas fa-bolt"></i>
+            <h3>Real-Time Availability</h3>
+            <p>Instantly check available charging slots near you.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Secure Payments</h3>
+            <p>Pay easily using UPI, Credit Cards, or Net Banking.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Locate Stations</h3>
+            <p>Find the nearest EV charging station in one click.</p>
+        </div>
+    </div>
+</section>
+  
+<section class="testimonials">
+  <h2>What Our Users Say</h2>
+  <div class="testimonial-container">
+      <div class="testimonial">
+          <p>"PlugNGoX made finding an EV charger so easy! Booking a slot took seconds."</p>
+          <h4>- Rahul Sharma</h4>
+      </div>
+      <div class="testimonial">
+          <p>"The real-time updates are fantastic. I never have to wait in long queues."</p>
+          <h4>- Priya Verma</h4>
+      </div>
+  </div>
+</section>
+     
+        <div class="sepration"></div>
+
+
+    <div class="fre">
+      <section class="FAQ__list__container">
+        <br><br>
+        <h1 class="FAQ__heading">Frequently Asked Questions</h1>
+        <br><br>
+        <div class="FAQ__list">
+          <div class="FAQ__accordian">
+           
+            <button class="FAQ__title">
+              
+              
+              What is PlugNgox?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                PlugNgox is an innovative platform that allows EV users to find and book charging slots at nearby electric recharge stations. It provides real-time availability, seamless booking, and secure payment options to ensure a hassle-free charging experience.
+              </p>
+              
+            </div>
+          
+          
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              How much does the PlugNgox cost?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                PlugNgox is free to use for finding charging stations and checking availability. However, the cost of charging depends on the station's pricing, which may vary based on location, time, and power output. Users will see the pricing details before confirming a booking.
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              Can I pre-book a charging slot in advance?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                Yes! PlugNgox allows users to pre-book a charging slot at their preferred station, ensuring availability when they arrive. Users can select the time slot and charging station that best fits their schedule.
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              What payment methods are available for booking a slot?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                We offer multiple secure payment options, including:
+  
+  1.Credit/Debit Cards
+  2.UPI & Digital Wallets
+  3.Net Banking
+  4.Subscription-based payments (for members)
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              How will I be notified about my booking confirmation or any
+                updates?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                Users receive instant notifications via:
+  
+                SMS & Email Confirmation
+                Push Notifications through the PlugNgox app
+                Live updates on booking status, slot availability, or any changes
+              </p>
+            </div>
+          </div>
+          <div class="FAQ__accordian">
+            <button class="FAQ__title">
+              Does the platform offer membership benefits or discounts for
+                regular users?<i class="fal fa-plus"></i>
+            </button>
+            <div class="FAQ__visible">
+              <p>
+                Yes! We offer a membership program where frequent users get:
+  
+  Discounted charging rates
+  Priority booking access during peak hours
+  Exclusive offers & rewards for loyalty
+              </p>
+              
+              
+            </div>
+          </div>
+        </div>
+        <div class="FAQ__accordian">
+          <button class="FAQ__title">
+            How do I check the availability of charging slots at a specific
+                station?<i class="fal fa-plus"></i>
+          </button>
+          <div class="FAQ__visible">
+            <p>
+              Simply enter your location or select a preferred charging station on the PlugNgox app/website. You'll see real-time availability status, upcoming free slots, and estimated wait times, making it easy to plan your charging session.
+  
+  Would you like me to refine any of these answers further or add more details? 🚀
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll to Top Button -->
+      <button id="scrollTopBtn" onclick="scrollToTop()">▲</button>
+
+      <div class="sepration"></div>
+    <%- include("partials/footer") %>
+  
+    <script>
+      window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    if (preloader) {
+        preloader.style.transition = "opacity 0.5s ease-in-out";
+        preloader.style.opacity = "0";
+
+        setTimeout(() => {
+            preloader.style.display = "none"; // Completely remove preloader
+        },1000); // Matches transition time
+    }
+});
+
+
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    >
+  </script>
+   <script>
+    AOS.init({ duration: 1000 });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+ 
+  </body>
+</html>

@@ -38,7 +38,7 @@ Copy code
 npm run dev
 nodemon app.js
 npm start
-The backend will run at http://localhost:3000 (default).
+The backend will run at http://localhost:3000/home (default).
 
 🌿 Working in Branches
 We have a public repository, but each member should work in their own branch.

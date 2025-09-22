@@ -1,90 +1,85 @@
-# ⚡ PlugNgox - Electric Vehicle Recharge Bunk
+# PlugNgox - Electric Vehicle Recharge Bunk
 
-PlugNgox is a full-stack web application designed to provide **real-time EV charging station booking and management**.  
-It helps **users** find nearby charging stations, check availability, and book slots, while **admins (station owners)** can register and manage their stations efficiently.
-
----
-
-## 🚀 Features
-
-### 👤 User Side
-- Secure user registration & login
-- Search and view nearby charging stations
-- Check **real-time slot availability**
-- Book slots with a preview before payment
-- Interactive map UI with **Mapbox + Leaflet**
-
-### 🛠️ Admin Side
-- Add, Edit, Delete charging stations
-- Manage available/total slots
-- Flash messages for smooth UI feedback
-- View station energy usage and stats
-- Real-time updates for station status
-- Payment gateway integration
-
+PlugNgox is a full-stack web application that allows users to find, book, and pay for electric vehicle (EV) charging stations in real-time. Admins can register their stations and manage slots, locations, and bookings.
 
 ---
 
-## 🏗️ Tech Stack
+## 📁 Repository Structure
 
-- **Frontend:** HTML, CSS, JavaScript, EJS Templates  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
-- **Maps:** Mapbox Geocoding API + Leaflet.js  
-- **Validation & Error Handling:** Joi + Express Middleware  
-
----
-
-## 📂 Project Structure
-
-PlugNgox/
-│-- models/ # MongoDB Schemas
-│-- routes/ # Express routes
-│-- views/ # EJS Templates
-│-- public/ # Static files (CSS, JS, Images)
-│-- app.js # Main server file
-│-- package.json
-│-- README.md
+plugNgox/
+├─ backend/ # Node.js + Express.js backend
+├─ frontend/ # EJS templates, HTML, CSS, JS
+├─ public/ # Static files
+├─ .env.example # Environment variables template
+├─ package.json
+└─ README.md
 
 yaml
 Copy code
 
 ---
 
-## ⚡ Installation & Setup
+## 🔧 Installation Setup
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Amit-dev-lab/PlugNGoX.git
-   cd PlugNGoX
-Install dependencies:
-
+### 1. Clone the repository
+```bash
+git clone https://github.com/<your-username>/plugNgox.git
+cd plugNgox
+2. Install dependencies
 bash
 Copy code
 npm install
-Create .env file in root and add:
+install nodemon globally
 
-init
-Copy code
-MONGO_URI=your_mongodb_connection_string
-PORT=3000
-Run the app:
 
+Add:
+
+MONGODB_URI → MongoDB connection string
+
+PORT → Backend server port
+
+
+4. Start the server
 bash
 Copy code
-npm start 
+npm run dev
 nodemon app.js
-Visit: http://localhost:3000/home
+npm start
+The backend will run at http://localhost:3000 (default).
 
+🌿 Working in Branches
+We have a public repository, but each member should work in their own branch.
 
-📌 Future Scope
+Example: Create and switch to your branch
+bash
+Copy code
+git checkout -b vivek
+1. Make changes
+Implement features in your branch (e.g., vivek branch)
 
-Real-time slot updates with WebSockets
+Test locally
 
-Advanced analytics for admins
+2. Stage and commit your changes
+bash
+Copy code
+git add .
+git commit -m "Added feature X / Fixed bug Y"
+3. Push your branch to GitHub
+bash
+Copy code
+git push origin vivek
+🔄 Creating a Pull Request (PR)
+Once your feature is ready:
 
-Mobile app support
+Go to the GitHub repository → Pull requests → New pull request.
 
-👨‍💻 Author
-Amit Bangde
-CSE - AIML | Full Stack Developer | AI Enthusiast
+Select base branch as main and compare branch as your feature branch (e.g., vivek).
+
+Add a clear title and description of your changes.
+
+Click Create pull request.
+
+Wait for review and merge by the admin.
+
+⚠️ Important: Never push directly to the main branch. Always create a branch and PR.
+

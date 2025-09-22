@@ -32,13 +32,6 @@ npm install
 install nodemon globally
 
 
-Add:
-
-MONGODB_URI → MongoDB connection string
-
-PORT → Backend server port
-
-
 4. Start the server
 bash
 Copy code

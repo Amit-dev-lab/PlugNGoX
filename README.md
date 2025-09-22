@@ -59,31 +59,31 @@ Copy code
    cd PlugNGoX
 Install dependencies:
 
--bash
--Copy code
--npm install
--Create .env file in root and add:
+bash
+Copy code
+npm install
+Create .env file in root and add:
 
--init
--Copy code
--MONGO_URI=your_mongodb_connection_string
--PORT=3000
--Run the app:
+init
+Copy code
+MONGO_URI=your_mongodb_connection_string
+PORT=3000
+Run the app:
 
--bash
--Copy code
--npm start 
--nodemon app.js
--Visit: http://localhost:3000/home
+bash
+Copy code
+npm start 
+nodemon app.js
+Visit: http://localhost:3000/home
 
 
 📌 Future Scope
 
--Real-time slot updates with WebSockets
+Real-time slot updates with WebSockets
 
--Advanced analytics for admins
+Advanced analytics for admins
 
--Mobile app support
+Mobile app support
 
 👨‍💻 Author
 Amit Bangde

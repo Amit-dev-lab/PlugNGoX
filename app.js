@@ -321,6 +321,46 @@ app.get("/admin_dashboard", (req, res) => {
   res.render("admin_Dashboard.ejs", { user: req.user, searchQuery });
 });
 
+
+// POST - Add new station
+app.post("/stations/add", async (req, res) => {
+  try {
+    const {
+      name,                // comes from <input name="name">
+      description,         // comes from <input name="description">
+      image,
+      city,
+      state,
+      Available_slots,     // note: in form you used capital A
+      slots,               // total slots
+      price                // in schema it's price_per_slot
+    } = req.body;
+
+    // Create new station
+    const newStation = new Listing({
+      title: name,                        // map "name" from form → "title" in schema
+      description,
+      image,
+      city,
+      state,
+      available_slots: Available_slots,   // form "Available_slots" → schema "available_slots"
+      total_slots: slots,                 // form "slots" → schema "total_slots"
+      price_per_slot: price               // form "price" → schema "price_per_slot"
+    });
+
+    // Save to MongoDB
+    await newStation.save();
+
+    // Redirect back with success message
+    req.flash("success", "Station added successfully!");
+    res.redirect("/admin_dashboard");   // adjust route as per your app
+  } catch (error) {
+    console.error(error);
+    req.flash("error", "Something went wrong while adding station.");
+    res.redirect("/admin_dashboard");
+  }
+});
+
 //payment
 app.post("/payment", async (req, res) => {
   let { amount } = req.body;

@@ -16,9 +16,6 @@ let listingSchema = new Schema({
         set :(v) => v === "" ? "https://imgs.search.brave.com/-B8xM6ElJ4hgODoDtVoRbkTfn715QjPuHE4TpQHnxwQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNzE3/MTY2NzUzL3Bob3Rv/L3VzYS1uZXZhZGEt/bGFzLXZlZ2FzLXN0/cmlwLWhvdGVscy1h/bmQtZWlmZmVsLXRv/d2VyLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1fazNOcVJO/VHBNX0FPVGh2U0dY/TlROZEdHSVBRWE1m/Z1JKbEFNSkZCZnIw/PQ" 
         : v,
     },
-    location:{
-        type :String
-    },
     city:{
         type:String,
     },
